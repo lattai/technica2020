@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forum</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="#">WebSiteName</a>
+          </div>
+          <ul class="nav navbar-nav">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
+            <li class="nav-item"><a class="nav-link" href="forum.html">Forum</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Resources</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Contact Us</a></li>
+          </ul>
+        </div>
+      </nav>
+    <div class="container">
+        <br><br>
+        <h1 class="text-left">Share Your Experience</h1>
+        <br>
+        <h3>Add post :</h3>
+        <div class="text-center">
+            <form action="add_post.php" class="form-group" id="post" method="POST" onsubmit="return validasiPost()">
+                <textarea name="message" class="form-control" id="message" cols="30" rows="7"></textarea>
+                <br>
+                <input class="col-md-8 btn btn-lg btn-primary " type="submit" form="post" value="Add">
+            </form>
+        </div>
+    </div>
+
+    <div>
+        <div class="container">
+            <div class="container-fluid mt-100">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card mb-4">
+                            <div class="card-header">
+                                <div class="media flex-wrap w-100 align-items-center"> 
+                                    <div data-letters="NC" class=""></div>
+                                    <div class="media-body ml-3"> <a href="javascript:void(0)" data-abc="true">Nicole Mae Chang</a>
+                                        <div class="text-muted small">2020-09-21 20:40:35</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <p> 
+                                    Some text
+                                </p>
+                            </div>
+                            <div class="card-footer actionBox">
+
+                                <ul class="commentList">
+                                    <li>
+                                        <div class="commenterImage">
+                                            <p data-letters="RH"></p>
+                                        </div>
+                                        <div class="commentText">
+                                            <p><b>Reika Hayashi</b></p>
+                                            <p class="">Some text</p> <span class="date sub-text">2020-10-25 20:12:12</span>
+                                        
+                                        </div>
+                                    </li>
+                                </ul>
+                                <ul class="commentList">
+                                    <li>
+                                        <div class="commenterImage">
+                                            <p data-letters="LA"></p>
+                                        </div>
+                                        <div class="commentText">
+                                            <p><b>Leah Attai</b></p>
+                                            <p class="">Some text</p> <span class="date sub-text">2020-10-25 20:12:12</span>
+                                        
+                                        </div>
+                                    </li>
+                                </ul>
+                                <ul class="commentList">
+                                    <li>
+                                        <div class="commenterImage">
+                                            <p data-letters="AP"></p>
+                                        </div>
+                                        <div class="commentText">
+                                            <p><b>Annisa Ayu Pramesti</b></p>
+                                            <p class="">Some text</p> <span class="date sub-text">2020-10-25 20:12:12</span>
+                                        
+                                        </div>
+                                    </li>
+                                </ul>
+                                <form action="" class="form-inline" role="form" id="replyid" method="">
+                                    <div class="form-group">
+                                        <input class="form-control" name="reply" type="text" placeholder="Your comments" required/>
+                                    </div>
+                                    <div class="form-group">
+                                        <button class="btn btn-primary" for="replyid">Add</button>
+                                    </div>
+                                </form>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <br><br>
+        </div>
+    </footer>
+</body>
+
+<script type = "text/javascript">
+    function validasiPost(){
+        var message = document.getElementById("message").value;
+        if (message != "" ){
+            return true;
+        } else {
+            alert('Message cannot be empty!');
+            return false;
+        }
+    }
+</script>
+</html>
