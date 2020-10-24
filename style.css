@@ -163,5 +163,10 @@ a {
     width: 100%;
     color: white;
     text-align: center;
+}
 
+#login {
+    padding-top: 10vw;
+    padding-bottom: 20vw;
+    text-align: center;
 }
