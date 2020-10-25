@@ -170,3 +170,25 @@ a {
     padding-bottom: 20vw;
     text-align: center;
 }
+
+.statistic {
+    text-align: center;
+    color: #3f6ad8;
+}
+
+.stat-container {
+    margin: 0vw 10vw 0vw 10vw;
+}
+
+.blue-banner {
+    background-color: #3f6ad8;
+    padding: 10vw;
+    color: white;
+}
+
+.home-banner {
+    /* background-color: #3f6ad8; */
+    height: 30vh;
+    padding: 10vw;
+    color: white;
+}
